@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NgModuleFactoryLoader, SystemJsNgModuleLoader } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { LazyLoadModuleDirective } from './lazy-load-module.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LazyLoadModuleDirective
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ { provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

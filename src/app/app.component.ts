@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'lazy-loading-non-route-modules';
+  public load: boolean;
+
+  public onButtonClick(): void {
+    this.load = true;
+  }
 }

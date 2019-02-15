@@ -26,7 +26,10 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "es5BrowserSupport": true
+            "es5BrowserSupport": true,
+            "lazyModules": [
+              "src/app/lazy-loaded/lazy-loaded.module"
+            ]
           },
           "configurations": {
             "production": {
